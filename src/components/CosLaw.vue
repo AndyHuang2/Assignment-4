@@ -7,7 +7,8 @@ const angleC = ref(0);
 const cSide = ref(0)
 function Coslawcalculator() {
     const angleInRadians = (angleC.value * Math.PI) / 180;
-    cSide.value = Math.sqrt(aSide.value * aSide.value + bSide.value * bSide.value - (2 * aSide.value * bSide.value * Math.cos(angleInRadians)));
+    cSide.value = Math.sqrt(
+        aSide.value * aSide.value + bSide.value * bSide.value - (2 * aSide.value * bSide.value * Math.cos(angleInRadians)));
 }
 </script>
 
@@ -30,17 +31,6 @@ function Coslawcalculator() {
 </template>
 
 <style scoped>
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 .calculator-container {
     background-color: #1e1e1e;
     border-radius: 10px;
@@ -83,7 +73,6 @@ input[type="number"]:focus {
     outline: none;
 }
 
-/* Submit Button */
 input[type="submit"] {
     background-color: #007bff;
     color: white;
