@@ -32,69 +32,74 @@ function Coslawcalculator() {
 
 <style scoped>
 .calculator-container {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-weight: 600;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
-    font-size: 14px;
-    color: #bbb;
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #bbb;
 }
 
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #445;
-    background-color: #333;
-    color: #fff;
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+input[type="number"],
+input[readonly],
+input[type="submit"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
+}
+
+input[type="number"],
+input[readonly] {
+  border: 1px solid #445;
+  background-color: #333;
+  color: #fff;
 }
 
 input[type="number"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
-    outline: none;
-}
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
 }
 
 input[readonly] {
-    background-color: #445;
-    color: #aaa;
+  background-color: #444;
+  color: #aaa;
 }
 
 input[readonly]:focus {
-    border-color: #445;
-    box-shadow: none;
+  border-color: #444;
+  box-shadow: none;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
 }
 </style>
